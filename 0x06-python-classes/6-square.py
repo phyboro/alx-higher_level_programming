@@ -5,6 +5,8 @@ Create a Class Square with:
 - method of area and method of print_square
 - getters & setters
 """
+
+
 class Square:
     """Class - Square"""
 
@@ -13,9 +15,9 @@ class Square:
         self.size = size
         self.position = position
 
-    def area(self)
+    def area(self):
         """Method to get the area of the Square"""
-    return (self.__size ** 2)
+        return (self.__size ** 2)
 
     def my_print(self):
         """Method to print a Square with spaces"""
@@ -56,5 +58,5 @@ class Square:
                 or (type(value[1]) is not int) \
                 or (value[0] < 0) or (value[1] < 0):
             raise TypeError("position must be a tuple of 2 positive integers")
-        else:
-            self.__position = value
+                else:
+                    self.__position = value
