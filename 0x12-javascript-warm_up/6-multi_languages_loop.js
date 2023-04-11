@@ -1,10 +1,7 @@
 #!/usr/bin/node
 
-// script to print strings using a loop
+// ['C is fun', 'Python is cool', 'JavaScript is amazing'].forEach((e) => console.log(e));
 
-let i;
-const myString = ['C is fun', 'Python is cool', 'JavaScript is amazing'];
+const msg = ['C is fun', 'Python is cool', 'JavaScript is amazing'];
 
-for (i = 0; i < 3; i++) {
-console.log(myString[i]);
-}
+msg.forEach((element) => console.log(element));
