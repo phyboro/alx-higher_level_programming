@@ -17,10 +17,10 @@ def secure_fetch():
     port = 3306
 
     db = MySQLdb.connect(host=host, user=username, passwd=password,
-                        db=db_name, port=port)
+            db=db_name, port=port)
     cur = db.cursor()
     cur.execute("SELECT * FROM states WHERE name = %s ORDER BY id ASC;",
-                [state_name])
+            [state_name])
 
     result = cur.fetchall()
     cur.close()
