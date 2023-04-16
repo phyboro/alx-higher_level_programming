@@ -14,10 +14,10 @@ def list_all():
     port = 3306
 
     db = MySQLdb.connect(host=host, user=username, passwd=password,
-                        db=db_name, port=port)
+            db=db_name, port=port)
     cur = db.cursor()
     cur.execute('SELECT c.id, c.name, s.name FROM cities c LEFT ' +
-                'JOIN states s ON c.state_id = s.id ORDER BY c.id ASC;')
+            'JOIN states s ON c.state_id = s.id ORDER BY c.id ASC;')
     result = cur.fetchall()
     cur.close()
     db.close()
