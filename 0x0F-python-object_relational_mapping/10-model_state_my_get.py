@@ -16,13 +16,13 @@ if __name__ == '__main__':
     port = '3306'
 
     engine = create_engine('mysql+mysqldb://{}:{}@{}:{}/{}'.format(
-                            username, password, host, port, db_name),
-                            pool_pre_ping=True)
+        username, password, host, port, db_name),
+        pool_pre_ping=True)
     Session = sessionmaker(bind=engine)
     local_session = Session()
     result = local_session.query(State).filter(
-                            State.name.like(state_name)
-                            ).first()
+            State.name.like(state_name)
+            ).first()
     local_session.close()
     engine.dispose()
 
