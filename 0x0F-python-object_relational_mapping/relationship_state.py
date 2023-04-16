@@ -12,7 +12,7 @@ class State(Base):
     '''state class for the state table'''
     __tablename__ = "states"
     id = Column(Integer, primary_key=True, nullable=False,
-            autoincrement=True, unique=True)
+                autoincrement=True, unique=True)
     name = Column(String(128), nullable=False)
     cities = relationship('City', back_populates='state',
-            cascade='all, delete, delete-orphan')
+                          cascade='all, delete, delete-orphan')
