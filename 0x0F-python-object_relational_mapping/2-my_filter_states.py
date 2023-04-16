@@ -21,10 +21,10 @@ def list_with_name():
 
 
     db = MySQLdb.connect(host=host, user=username, passwd=password,
-                        db=db_name, port=port)
+            db=db_name, port=port)
     cur = db.cursor()
     cur.execute(('SELECT * FROM states WHERE BINARY name = \'{}\'\
-                ORDER BY id ASC;').format(state_name))
+            ORDER BY id ASC;').format(state_name))
     result = cur.fetchall()
     cur.close()
     db.close()
